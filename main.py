@@ -34,9 +34,12 @@ def markdown_params():
                 print("Available formatters:", *tuple(list(formatters.keys())))
                 print("Available commands:", *commands)
             elif mk_format == "!done":
+                print(output)
                 break
-            output += apply_formatter(mk_format)
-            print(output)
+            else:
+                output += apply_formatter(mk_format)
+                print(output)
+
 
 
 def main():
